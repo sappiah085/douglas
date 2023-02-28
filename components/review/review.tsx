@@ -49,14 +49,14 @@ export default function Review() {
   return (
     <section
       id="customer"
-      className="w-full  bg-main flex flex-col md:p-12 p-5 scroll-mt-24"
+      className="w-full  bg-main flex flex-col md:p-12 p-3 py-12 scroll-mt-24"
     >
-      <span className="flex  justify-between items-center text-white gap-4 ">
+      <span className="flex  justify-between items-center flex-wrap text-white gap-4 ">
         <span className="flex flex-col gap-2">
           <h2 className="md:text-3xl text-xl ‚font-medium">
             What our Customers say about us
           </h2>
-          <h3 className="md:text-lg text-md font-light">
+          <h3 className="md:text-lg text-sm font-light">
             Don’t just take our word for it. Hear what others have to say
           </h3>
         </span>

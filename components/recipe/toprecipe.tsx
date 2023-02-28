@@ -46,10 +46,12 @@ export default function TopRecipe() {
           <RecipeCard label={label} {...el} key={label} />
         ))}
       </div>
-      <div className="  w-full py-28  sm:columns-2 space-y-4 ">
+      <div className="  w-full py-28  px-5 md:px-0 sm:columns-2 space-y-4 ">
         <div className="flex flex-col gap-4 w-full flex-1 min-w-[310px] ">
-          <h2 className="text-5xl font-bold">Eat healthy, stay healthy</h2>
-          <p className="flex flex-col">
+          <h2 className="lg:text-5xl text-2xl font-bold">
+            Eat healthy, stay healthy
+          </h2>
+          <p className="flex flex-col   ">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est eius
             repellat, mollitia aperiam quisquam voluptatibus numquam aliquid
             nulla recusandae alias quod sequi sit? Consequuntur veritatis quos

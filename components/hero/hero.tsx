@@ -46,10 +46,10 @@ export default function Hero() {
     };
   }, [index]);
   return (
-    <section className="w-full h-screen flex justify-between gap-10 items-center pt-8 px-14 relative">
+    <section className="w-full min-h-screen flex justify-between gap-10 items-center md:pt-8 md:px-14 px-2 relative flex-wrap pt-24">
       <Circles color={quest[index].color} />
-      <div className="flex flex-col z-10 items-center text-center gap-10 max-w-3xl px-4">
-        <h1 className="text-6xl flex gap-2 flex-col font-inter font-bold relative">
+      <div className="flex flex-col z-10 items-center text-center gap-10 max-w-4xl px-4">
+        <h1 className="lg:text-6xl text-4xl  flex gap-2 flex-col font-inter font-bold relative ">
           What would you love to
           <span
             ref={labelRef}
@@ -84,16 +84,16 @@ export default function Hero() {
           prepared meals like no other in town.
         </h2>
       </div>
-      <div className="z-10 flex-1 h-[450px] flex flex-col relative overflow-hidden ">
-        <div className="relative h-full w-full ">
+      <div className="z-10 flex-1 min-w-[300px] flex-shrink-0 h-[450px]  relative overflow-hidden ">
+        <div className="relative   h-full w-full ">
           {quest.map(({ label, image }, id) => (
             <Image
               ref={imageRef}
               key={label}
               className={
                 id === 0
-                  ? "absolute h-full object-cover w-auto top-0 left-0"
-                  : "absolute h-full object-cover w-auto top-0 left-0 transition-all duration-500"
+                  ? "absolute h-[90%] object-contain lg:w-auto  top-0 left-0"
+                  : "absolute h-[90%] object-contain   lg:w-auto  top-0 left-0 transition-all duration-500"
               }
               src={image}
               style={{

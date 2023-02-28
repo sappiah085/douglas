@@ -1,33 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/static/logo.png";
-import { useEffect } from "react";
-const nav_link: { url: string; label: string }[] = [
-  {
-    url: "#recipes",
-    label: "Recipes",
-  },
-  {
-    url: "/",
-    label: "Popular",
-  },
-  {
-    url: "#customer",
-    label: "Customer reviews",
-  },
-  {
-    url: "#partners",
-    label: "Our Partners",
-  },
-  {
-    url: "#contact",
-    label: "Contact us",
-  },
-];
+import { nav_link } from "../resuse/links";
 
 export default function NavBar() {
   return (
-    <header className="flex w-full  fixed top-0 z-30 bg-gradient-to-r from-white via-white to-transparent">
+    <header className="w-full hidden lg:flex   fixed top-0 z-30 bg-gradient-to-r from-white via-white to-transparent">
       <nav className="flex justify-between px-14 gap-28 items-center w-full h-full">
         <div>
           <Image

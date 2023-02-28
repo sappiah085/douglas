@@ -2,11 +2,11 @@ import All from "@/components/all/all";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import NavBar from "@/components/navbar/nav";
+import NavSmall from "@/components/navsmall/navsmall";
 import Partner from "@/components/partner/partner";
 import TopRecipe from "@/components/recipe/toprecipe";
 import Review from "@/components/review/review";
 import Head from "next/head";
-import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
         }
       >
         <NavBar />
+        <NavSmall />
         <Hero />
         <All />
         <TopRecipe />
