@@ -49,15 +49,46 @@ export default function Hero() {
     <section className="w-full min-h-screen flex justify-between gap-10 items-center md:pt-8 md:px-14 px-2 relative flex-wrap pt-24">
       <Circles color={quest[index].color} />
       <div className="flex flex-col z-10 items-center text-center gap-10 max-w-4xl px-4">
-        <h1 className="lg:text-6xl text-4xl  flex gap-2 flex-col font-inter font-bold relative ">
+        <h1 className="text-4xl  gap-2 flex-col font-inter font-bold relative justify-center flex md:hidden ">
+          What would you love to have?
+          <span
+            ref={labelRef}
+            className="inline-flex relative gap-1 overflow-hidden items-center "
+          >
+            <span className="text-white ">.</span>
+            <div className="h-full ">
+              <span className="flex w-full absolute flex-col top-0">
+                {quest.map(({ label, color }, id) => (
+                  <div
+                    style={{
+                      transform: `translateY(${
+                        (id - index) * height.label + 2
+                      }px)`,
+                      opacity: id != index ? 0 : 1,
+                      color: ringsColor[color + "4"],
+                    }}
+                    className={
+                      "absolute top-0  w-full transition-all duration-500"
+                    }
+                    key={label}
+                  >
+                    {label}
+                  </div>
+                ))}
+              </span>
+            </div>
+          </span>
+        </h1>
+
+        <h1 className="lg:text-6xl text-4xl  gap-2 flex-col font-inter font-bold relative justify-center hidden md:flex ">
           What would you love to
           <span
             ref={labelRef}
-            className="inline-flex  relative gap-1 overflow-hidden   justify-center  items-center   "
+            className="inline-flex relative gap-1 overflow-hidden   md:justify-center  items-center "
           >
             have?{" "}
-            <div className="h-full w-2/3">
-              <span className="flex absolute flex-col  top-0  items-start">
+            <div className="h-full w-2/3 ">
+              <span className="flex absolute flex-col  top-0  ">
                 {quest.map(({ label, color }, id) => (
                   <div
                     style={{
@@ -79,7 +110,8 @@ export default function Hero() {
             </div>
           </span>
         </h1>
-        <h2 className="text-xl font-light">
+
+        <h2 className="md:text-xl text-lg max-w-xl font-light ">
           We are super excited to give you the best. We give you hot and well
           prepared meals like no other in town.
         </h2>

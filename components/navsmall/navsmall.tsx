@@ -8,11 +8,11 @@ export default function NavSmall() {
   const [value, setValue] = useState(false);
   return (
     <header className="w-full lg:hidden flex  fixed top-0 z-30 bg-gradient-to-r from-white via-white to-transparent">
-      <nav className="flex justify-between px-14 gap-28 items-center w-full ">
-        <div>
+      <nav className="flex justify-between  gap-28 items-center w-full ">
+        <div >
           <Image
             priority
-            className=" h-[70px] object-contain "
+            className="object-cover h-[70px]  "
             src={logo}
             alt="logo"
             aria-label="logo"
@@ -28,7 +28,7 @@ export default function NavSmall() {
         />
         <label
           htmlFor="toggle"
-          className="h-[60px] z-30 flex absolute right-2 top-2 justify-center peer-checked:rotate-0 transition-all duration-200 items-center w-[60px] rotate-90 bg-white rounded-[50%] drop-shadow-md"
+          className="h-[60px] z-30 flex absolute right-2 top-2 justify-center peer-checked:rotate-0 transition-all duration-200 items-center w-[60px] rotate-90 bg-white rounded-[50%] "
         >
           {value && <GiKnifeFork />}
           {!value && <GiForkKnifeSpoon />}

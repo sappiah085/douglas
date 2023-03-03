@@ -1,6 +1,6 @@
 import { ringsColor } from "../resuse/colors";
 const Circles = ({ color }: { color: string }) => (
-  <div className="absolute aspect-square  z-[2] right-[0%] translate-x-[50%]  top-0 h-full">
+  <div className="absolute aspect-square  z-[2] right-[0%] translate-x-[50%]  top-0 h-full hidden md:block">
     {[`${color}4`, `${color}3`, `${color}2`, `${color}1`].map((color, id) => {
       return (
         <div
