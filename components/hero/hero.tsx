@@ -117,7 +117,7 @@ export default function Hero() {
         </h2>
       </div>
       <div className="z-10 flex-1 min-w-[300px] flex-shrink-0 h-[450px]  relative overflow-hidden ">
-        <div className="relative   h-full w-full ">
+        <div className="relative   h-full w-full scale-[0.9]">
           {quest.map(({ label, image }, id) => (
             <Image
               ref={imageRef}
@@ -125,13 +125,11 @@ export default function Hero() {
               className={
                 id === 0
                   ? "absolute h-[90%] object-contain lg:w-auto  top-0 left-0"
-                  : "absolute h-[90%] object-contain   lg:w-auto  top-0 left-0 transition-all duration-500"
+                  : "absolute h-[90%] object-contain   lg:w-auto  top-0 left-0 transition-all duration-500 "
               }
               src={image}
               style={{
-                transform: `translateY(${(id - index) * height.image}px) ${
-                  id == 0 ? "scale(1.2)" : "scale(1)"
-                }`,
+                transform: `translateY(${(id - index) * height.image}px)`,
                 opacity: id != index ? 0 : 1,
               }}
               alt={label}
